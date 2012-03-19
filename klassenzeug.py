@@ -32,3 +32,16 @@ assert hans not in schule.schueler
 schule.nehme_auf(hans)
 
 assert hans in schule.schueler
+
+##class X:
+##    def __init__(self, xxxx):
+##        ...
+##
+## a = X(xxxx)
+## ///////////
+## X
+## X(xxxx)
+## <X object> wird erstellt
+## __init__(<X object>, xxxx) wird aufgerufen
+## ... wird abgearbeitet
+## <X object> wird in a gespiechert
