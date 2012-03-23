@@ -1,8 +1,11 @@
+# -*- coding: cp1252 -*-
 import sys
 from PyQt4 import QtGui
 
 class Example(QtGui.QWidget):
     # Aehm... ja, cool, versteh ich nicht.
+##    aus klassen macht man objekte
+##    klassen sind sowas wie schablonen
 
     def __init__(self):
         super(Example, self).__init__()
@@ -19,6 +22,8 @@ class Example(QtGui.QWidget):
         self.setWindowIcon(QtGui.QIcon('web.png'))
         # Ich schaetze hier sollte man dann im Besitz von web.png sein?
         # Muss das im selben Ordner sein wie das Programm?
+##        'web.png' ist der pfad... = './web.png'
+##        also wenn du das programm ausführst, ist . der pfad, wo das programm ist also ja
 
         self.show()
 
