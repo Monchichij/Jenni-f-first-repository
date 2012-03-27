@@ -9,6 +9,7 @@ open(to_file, 'w').write(open(from_file).read())
 ## wenn du variablen benutzt, kannst du die datei schließen
 ## ausserdem liest man und schriebt man nicht die ganze datei, sondern immer stücke..
 ## was ist wenn du enie 1gb datei hast?
+### Wow, die Frage ist so genial gestellt, sie verwirrt mich erstmal selber. -.-"
 
 # Muss ich .close() benutzen oder hier nicht? Wenn ja, wie benutze ich es hier?
 # Mir faellt nur ein, die Datei nochmal zu oeffnen, aber das verfehlt sein Ziel ja.
@@ -17,3 +18,8 @@ open(to_file, 'w').write(open(from_file).read())
 # wie das geht?
 ##
 ## was ist matschen?
+### Matschen ist in diesem Zusammenhang  so was wie, ich nehm das aus der ersten Datei und
+### fuege es einer schon vorhandenen Datei hinzu. Oder ich habe zwei Dateien und erstelle
+### eine Kopie mit dem Inhalt von beiden?
+
+###Danke :)
