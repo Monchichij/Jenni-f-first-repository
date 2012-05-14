@@ -13,7 +13,7 @@ hier ist die modulbeschribung für meine klasse
 
 '''
 
-
+from Py_Input import integer_input
 
 
 
@@ -30,9 +30,6 @@ Klasse Auto, die man zum fahren benutzen kann.
         ## oberste devise: copy&paste vermeiden!
         ## aus dieser devise sind
         ## schleifen und klassen entstanden
-        print """Unser Auto ist {1}, ein {0}, hat {2} Sitze,
-                faehrt gerade {3} km/h im {4}.Gang mit {5} Personen im
-                Auto.""".format(marke, farbe, sitze, speed, gang, fahrer)
 
         ## gefällt mir!
         # Auto am Anfang
@@ -42,6 +39,8 @@ Klasse Auto, die man zum fahren benutzen kann.
         self.speed = speed
         self.gang = gang
         self.fahrer = fahrer
+
+        print Auto.unser_auto(self)
         
     def umlackieren(self):
         neuefarbe = raw_input("In welcher Farbe soll das Auto lackiert werden?\n > ")
@@ -59,30 +58,28 @@ Klasse Auto, die man zum fahren benutzen kann.
         ##         self.speed += int(beschleunigung)
         ##         break
         ##     print 'bitte nur zahlen eingeben'
-           
-        beschleunigung = input("Wie stark soll beschleunigt werden?\n > ")
-        self.speed += beschleunigung
+        beschleunigung = integer_input(\
+                             "Wie stark soll beschleunigt werden?\n > ")
+        self.speed += int(beschleunigung)
 
     def bremsen(self):
         # input immer siehe beschleunigen
-        bremsung = input("Wie stark soll gebremst werden?\n > ")
-        self.speed -= bremsung
+            bremsung = integer_input("Wie stark soll gebremst werden?\n > ")
 
     def schalten(self):
-        schaltung = input("In welchen Gang moechtest du schalten?\n > ")
+        schaltung = integer_input("In welchen Gang moechtest du schalten?\n > ")
         self.gang = schaltung
 
     def einsteigen(self):
-        personen = input("Wie viele Personen steigen ein?\n > ")
+        personen = integer_input("Wie viele Personen steigen ein?\n > ")
         self.fahrer += personen
 
     def aussteigen (self):
-        personen = input("Wie viele Personen steigen aus?\n > ")
-        self.fahrer -= personen
-    
+        personen = integer_input("Wie viele Personen steigen aus?\n > ")
+        self.fahrer -= personen 
     
     def unser_auto(self):
-        print """Unser Auto ist {1}, ein {0}, hat {2} Sitze,
+        return """Unser Auto ist {1}, ein {0}, hat {2} Sitze,
                 faehrt gerade {3} km/h im {4}.Gang mit {5} Personen im
                 Auto.""".format(self.marke, self.farbe, self.sitze, self.speed, self.gang, self.fahrer)
         # Auto am Ende
@@ -99,9 +96,10 @@ if __name__ == '__main__':
     
     marke = raw_input("Von welcher Marke ist unser Auto?\n > ")
     farbe = raw_input("Welche Farbe hat unser Auto?\n > ")
-    sitze = input("Wie viele Sitze hat unser Auto?\n > ")
-    speed = input("Mit welcher Geschwindigkeit fahren wir?\n > ")
-    gang = input("Welcher Gang ist eingelegt?\n > ")
-    fahrer = input("Wie viele Personen befinden sich im Auto?\n > ")
+    sitze = integer_input("Wie viele Sitze hat unser Auto?\n > ")
+    speed = integer_input("Mit welcher Geschwindigkeit fahren wir?\n > ")
+    gang = integer_input("Welcher Gang ist eingelegt?\n > ")
+    fahrer = integer_input("Wie viele Personen befinden sich im Auto?\n > ")
+
     Auto(marke, farbe, sitze, speed, gang, fahrer)
     ## gefällt mir!
