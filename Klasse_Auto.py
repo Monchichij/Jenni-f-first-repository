@@ -40,7 +40,11 @@ Klasse Auto, die man zum fahren benutzen kann.
         self.gang = gang
         self.fahrer = fahrer
 
+        ## das ist dasselbe wie
+        ## print self.unser_auto()
         print Auto.unser_auto(self)
+        ## schau mal nach unten und probier mal
+        ## print self
         
     def umlackieren(self):
         neuefarbe = raw_input("In welcher Farbe soll das Auto lackiert werden?\n > ")
@@ -83,6 +87,11 @@ Klasse Auto, die man zum fahren benutzen kann.
                 faehrt gerade {3} km/h im {4}.Gang mit {5} Personen im
                 Auto.""".format(self.marke, self.farbe, self.sitze, self.speed, self.gang, self.fahrer)
         # Auto am Ende
+        ## jetzt, wo du die methode das auto als string zurück gibt,
+        ## kannst du sie auch __str__ nennen
+    __str__ = unser_auto
+        ## probier jetzt das mal aus:
+        ## print self
 
 
 if __name__ == '__main__':
